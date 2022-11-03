@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Trirong");
+@import url("https://fonts.googleapis.com/css?family=Audiowide");
 #root {
   width: 100%;
   display: flex;
@@ -23,7 +25,7 @@ header{
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  background-color:grey ;
+  background-color:#262726 ;
   
 }
 header h1{
@@ -37,7 +39,7 @@ header form{
   display: flex;
   align-items: center;
 }
-.search{
+.search , #movies{
     width: 230px;
     height: 30px;
     border: 1px solid black;
@@ -45,8 +47,36 @@ header form{
     padding-left: 15px;
 }
 #root div{
-    width: 250px;
-    height: 380px;
+    width: 290px;
+    height: 450px;
     margin: 19px 15px;
-    border: 1px solid black;
+    /* border: 3px ridge #262626; */
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 5px;
+}
+
+#root img{
+  margin-left: 18px;
+  margin-top: 10px;
+}
+
+#root h3{
+  text-align: center;
+  margin-top: 5px ;
+  font-family: "Trirong",serif;
+}
+#root p{
+  text-align: left;
+  font-family: "Trirong",serif;
+  margin-top: 5px;
+  padding-right: 10px ;
+  padding-left: 10px;
+  font-size: small;
+}
+label{
+  padding-left:10px;
+  color: #fff;
+}
+#movies{
+  margin-left: 5px;
 }
