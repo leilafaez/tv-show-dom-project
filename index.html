@@ -3,14 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TV Show Project | My Name (My GitHub username)</title>
+    <title>TV Show Project | Leila Faez (leilafaez)</title>
     <link href="style.css" rel="stylesheet" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
 
   <body>
-    <div id="root">
-    </div>
+   
+    <!-- search bar container -->
+    <header>
+      <a href="#"><h1>Movies</h1></a>
+      <form id="form">
+        <input type="text" class="search" placeholder="Search" id="search">
+        <label for="movies">Choose your Movie </label>
+        
+        <select name="movies" id="movies" >
+          <option selected></option>
+        </select>
+      </form>
+    </header>
+    <!-- all movies section -->
+     <div id="root">
+
+     </div>
+     <!-- <footer>
+      &copy  TVMaze.com
+     </footer> -->
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
