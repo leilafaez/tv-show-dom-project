@@ -15,10 +15,13 @@
       <a href="#"><h1>Movies</h1></a>
       <form id="form">
         <input type="text" class="search" placeholder="Search" id="search">
-        <label for="movies">Choose your Movie </label>
+        <span id="episod-count"></span>
         
         <select name="movies" id="movies" >
-          <option selected></option>
+          <option value="" selected >--Select the episode--</option>
+        </select>
+        <select name="shows" id="shows">
+          <option value="" selected>--Select the show--</option>
         </select>
       </form>
     </header>
@@ -26,14 +29,15 @@
      <div id="root">
 
      </div>
-     <!-- <footer>
-      &copy  TVMaze.com
-     </footer> -->
+     <footer>
+      &copy <a href="https://TVMaze.com">TVMaze.com</a>
+     </footer>
 
     <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
     <script src="episodes.js"></script>
 
     <!-- Loads YOUR javascript code -->
-    <script src="script.js"></script>
+    <script src="APIscript.js"></script>
+    <script src="shows.js"></script>
   </body>
 </html>

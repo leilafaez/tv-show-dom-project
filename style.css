@@ -39,7 +39,7 @@ header form{
   display: flex;
   align-items: center;
 }
-.search , #movies{
+.search , #movies, #shows{
     width: 230px;
     height: 30px;
     border: 1px solid black;
@@ -74,9 +74,24 @@ header form{
   font-size: small;
 }
 label{
-  padding-left:10px;
+  padding-left: 15px;
   color: #fff;
 }
 #movies{
-  margin-left: 5px;
+  margin-left: 200px;
+}
+#shows{
+  margin-left: 10px;
+}
+#episod-count{
+  color: #fff;
+}
+footer{
+   text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #6d6875;
+}
+footer a{
+  text-decoration: none;
 }
