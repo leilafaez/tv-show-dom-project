@@ -53,8 +53,9 @@ function makePageForEpisodes(episodeList) {
   });
 }
 
+//function for creating each episode card
 function episodeCards(episodeList){
-  //map over
+  
   let html = ''
   episodeList.forEach(show=> {
     const doubleShowNumber =show.number<10?'0':''
@@ -74,7 +75,7 @@ const searchInput = document.getElementById("search");
 function search(episodlist) {
   searchInput.addEventListener("keyup", (e) => {
     let value = e.target.value;
-    let html = "";
+    // let html = "";
    
     // //10/73
     // let count =document.getElementById("episod-count");
@@ -107,9 +108,9 @@ function search(episodlist) {
       
       const searchLength = search.length;
       const totalEpisodes = episodlist.length
-      count.textContent = `${searchLength}/${totalEpisodes}`
+      count.textContent = `Search Count :${searchLength}/${totalEpisodes}`
       episodeCards(search)
-    // rootElem.innerHTML = html;
+   
   });
 }
 
