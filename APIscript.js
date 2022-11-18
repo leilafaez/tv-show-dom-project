@@ -1,7 +1,6 @@
 function setup() {
   const showName = getAllShows();
   showNameList(showName);
-
   console.log(showName);
 }
 
@@ -26,7 +25,7 @@ fetch(endpointShow)
     return response.json();
   })
   .then((data) => {
-    
+    // makePageForShows(data);
     console.log(data);
   });
 
@@ -65,7 +64,7 @@ function episodeCards(episodeList){
     <p>${show.summary}</p>
     </div>`;
   })
-      rootElem.innerHTML = html;    // 
+      rootElem.innerHTML = html;    
 }
 
 
@@ -171,7 +170,7 @@ function showNameList(ListOfShowsName) {
 //search for show dropdown
 function getSelectedURL(){
     const selectedOption = (listOfShows.value);
-    // let selectedOption = Number(listOfShows.value);
+   
     return `https://api.tvmaze.com/shows/${selectedOption}/episodes`;
 }
 

@@ -48,11 +48,14 @@ header form{
 }
 #root div{
     width: 290px;
-    height: 450px;
-    margin: 19px 15px;
-    /* border: 3px ridge #262626; */
+    /* height: 450px; */
+    height:fit-content; 
+ 
+  margin: 19px 15px;
+  
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
     border-radius: 5px;
+   
 }
 
 #root img{
@@ -86,6 +89,43 @@ label{
 #episod-count{
   color: #fff;
   margin-left: 10px;
+}
+#root section{
+  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    margin-bottom: 30px;
+    padding-bottom: 50px;
+    
+    /* height: 620px; */
+   width:950px ;
+  height:fit-content; 
+
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  border-radius: 5px;
+}
+#root section div{
+  width: 200px;
+    height: 150px;
+  
+  margin: 19px 15px;
+  
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.4);
+    border-radius: 5px;
+}
+#root section p{
+  font-size: medium;
+}
+ul{
+  position: relative;
+  top:25px
+  
+}
+li{
+  list-style: none;
+   font-family: "Trirong",serif;
 }
 footer{
    text-align: center;
