@@ -42,6 +42,7 @@ fetch(endpointEpisod)
 function makePageForShows(showList) {
   showList.forEach((show) => {
     const showContainer = document.createElement("section");
+    showContainer.setAttribute("id","show-section");
     const title = document.createElement("h3");
     const image = document.createElement("img");
     const summary = document.createElement("p");
@@ -78,8 +79,13 @@ function makePageForShows(showList) {
 
     rootElem.appendChild(showContainer);
 
-    showContainer.addEventListener("click",getEpisod);
+    
   });
+}
+
+function loadEpisodByShowClick(){
+    let sectionOfShow = document.getElementById("show-section");
+    sectionOfShow.addEventListener("click", getEpisod);
 }
 
 //make a main page by episodes
@@ -276,6 +282,7 @@ shows=getAllShows();
   showNameList(shows);
 searchForShow(shows);
 hideEpisodeSelect();
+ loadEpisodByShowClick();
 //   searchInput.addEventListener("keyup", searchForShow(shows));
   
 }
