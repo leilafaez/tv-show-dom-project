@@ -78,15 +78,18 @@ function makePageForShows(showList) {
     showDetailItem.appendChild(showDetailRuntime);
 
     rootElem.appendChild(showContainer);
-
-    
+    showContainer.addEventListener("click",()=>{
+    //  debugger
+      getEpisod(show.id);
+      
+    });
   });
 }
 
-function loadEpisodByShowClick(){
-    let sectionOfShow = document.getElementById("show-section");
-    sectionOfShow.addEventListener("click", getEpisod);
-}
+// function loadEpisodByShowClick(){
+//     let sectionOfShow = document.getElementById("show-section");
+//     sectionOfShow.addEventListener("click", getEpisod);
+// }
 
 //make a main page by episodes
 function makePageForEpisodes(episodeList) {
@@ -237,14 +240,15 @@ function showNameList(ListOfShowsName) {
   });
 }
 //search for show dropdown
-function getSelectedURL() {
-  const selectedOption = listOfShows.value;
+// function getSelectedURL() {
+//   const selectedOption = listOfShows.value;
 
-  return `https://api.tvmaze.com/shows/${selectedOption}/episodes`;
-}
+//   return `https://api.tvmaze.com/shows/${selectedOption}/episodes`;
+// }
 
-function getEpisod() {
-  let newURL = getSelectedURL();
+function getEpisod(episodID) {
+  console.log(episodID);
+  let newURL = `https://api.tvmaze.com/shows/${episodID}/episodes`;
   fetch(newURL)
     .then((response) => {
       return response.json();
@@ -266,7 +270,10 @@ function getEpisod() {
       rootElem.innerHTML = html;
     });
 }
-listOfShows.addEventListener("change", getEpisod);
+listOfShows.addEventListener("change",()=>{
+  console.log(listOfShows);
+   getEpisod(listOfShows.value);
+});
 
 function hideEpisodeSelect(){
     select.style.display="none";
